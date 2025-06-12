@@ -26,8 +26,9 @@
           <span class="text-xl font-semibold">Networks</span>
         </a>
         <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          Penyedia solusi komunikasi VoIP dengan teknologi mutakhir,
-          terpercaya untuk bisnis modern di Indonesia.
+          Provide your network connectivity solutions
+          Trusted distributor and Experienced technical support for DASAN equipment in Indonesia
+          Offers something that is beyond your reach
         </p>
       </div>
 
@@ -35,65 +36,59 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm md:w-2/3">
         <div>
           <h3 class="text-gray-900 dark:text-gray-100 font-semibold uppercase tracking-wide mb-2">
-            Produk
+            Solutions
           </h3>
           <ul class="space-y-1">
             <li>
-              <a href="#" class="hover:underline">IP Phone</a>
+              <a href="#" class="hover:underline">Broadband Access</a>
             </li>
-            <li><a href="#" class="hover:underline">Gateway</a></li>
+            <li><a href="#" class="hover:underline">Mobile Service</a></li>
             <li>
-              <a href="#" class="hover:underline">Interkom</a>
-            </li>
-            <li><a href="#" class="hover:underline">Switch</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-gray-900 dark:text-gray-100 font-semibold uppercase tracking-wide mb-2">
-            Solusi
-          </h3>
-          <ul class="space-y-1">
-            <li>
-              <a href="#" class="hover:underline">VoIP Office</a>
-            </li>
-            <li><a href="#" class="hover:underline">PABX IP</a></li>
-            <li>
-              <a href="#" class="hover:underline">Call Center</a>
-            </li>
-            <li>
-              <a href="#" class="hover:underline">Hotel System</a>
+              <a href="#" class="hover:underline">Subscriber CPE</a>
             </li>
           </ul>
         </div>
 
         <div>
           <h3 class="text-gray-900 dark:text-gray-100 font-semibold uppercase tracking-wide mb-2">
-            Perusahaan
+            Product
           </h3>
           <ul class="space-y-1">
             <li>
-              <a href="#" class="hover:underline">Tentang Kami</a>
+              <a href="#" class="hover:underline">OLT</a>
             </li>
-            <li><a href="#" class="hover:underline">Kontak</a></li>
-            <li><a href="#" class="hover:underline">Karier</a></li>
-            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">ONU</a></li>
+            <li>
+              <a href="#" class="hover:underline">ONT</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">PoE Switch</a>
+            </li>
           </ul>
         </div>
 
         <div>
           <h3 class="text-gray-900 dark:text-gray-100 font-semibold uppercase tracking-wide mb-2">
-            Bantuan
+            Company
+          </h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:underline">about</a>
+            </li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-gray-900 dark:text-gray-100 font-semibold uppercase tracking-wide mb-2">
+            Help & Support
           </h3>
           <ul class="space-y-1">
             <li><a href="#" class="hover:underline">FAQ</a></li>
             <li>
-              <a href="#" class="hover:underline">Dokumentasi</a>
+              <a href="#" class="hover:underline">Documentation</a>
             </li>
             <li><a href="#" class="hover:underline">Support</a></li>
-            <li>
-              <a href="#" class="hover:underline">Kebijakan</a>
-            </li>
           </ul>
         </div>
       </div>
