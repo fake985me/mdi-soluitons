@@ -1,4 +1,4 @@
-## SHOPPER ECOMMERCE
+## web kantor
 
 Developed using Laravel, my e-commerce project offers a clean and minimalist interface with powerful multi-filtering features. Users can filter by categories, color and price of products, and can also perform brand-specific searches using the search bar. With the ability to combine multiple filters and search by specific categories, shoppers can easily find the products they want and enjoy a seamless and personalized shopping experience. Explore my user-friendly and visually appealing e-commerce project for a hassle-free shopping journey.
 
@@ -18,8 +18,7 @@ Developed using Laravel, my e-commerce project offers a clean and minimalist int
 -   Product page (URL: /#/product)
     -   List of products
     -   List of products pulled from specific category
-    -   Product filtering by category, price range, color and size
-    -   Add products to cart
+    -   Product filtering by category
     -   Pagination feature
     -   Sort by product name and price
 -   Product detail page (URL: /#/product/{slug})
@@ -49,21 +48,3 @@ Developed using Laravel, my e-commerce project offers a clean and minimalist int
     -   Add, delete, edit and list site setting
     -   Creating a field with ajax according to the selected input (ckeditor, textarea, text, file, image, email)
 
-…or create a new repository on the command line
-echo "# mdi-soluitons" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/fake985me/mdi-soluitons.git
-git push -u origin main
-…or push an existing repository from the command line
-git remote add origin https://github.com/fake985me/mdi-soluitons.git
-git branch -M main
-git push -u origin main
-
-buat update file
-
-git add nama file
-git commit -m "komentar"
-git push -u origin main
