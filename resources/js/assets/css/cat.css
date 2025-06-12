@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+section {
+  background: rgba(240, 248, 255, 0.9);
+  padding: 100px 0;
+}
+
+.tab {
+  &__list {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    overflow: hidden;
+    cursor: pointer;
+    padding: 12px 8px;
+    margin-right: 24px;
+    text-shadow: 0 0 0.5px currentColor;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    font-size: 18px;
+    position: relative;
+    color: #777777;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 95%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: #19d9b4;
+      transition: 0.2s;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &.is--active {
+      color: #444;
+      position: relative;
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 0 10px 10px;
+  }
+
+  &__content-item {
+    display: none;
+
+    &.is--active {
+      display: block;
+    }
+  }
+
+  &__content-title {
+    padding: 24px 24px 24px 0;
+  }
+}
+
+.tab .tab {
+  .tab__item {
+    font-size: 16px;
+  }
+
+  .tab__content {
+    padding: 0;
+  }
+}
