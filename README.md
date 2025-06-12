@@ -61,3 +61,9 @@ git push -u origin main
 git remote add origin https://github.com/fake985me/mdi-soluitons.git
 git branch -M main
 git push -u origin main
+
+buat update file
+
+git add nama file
+git commit -m "komentar"
+git push -u origin main
