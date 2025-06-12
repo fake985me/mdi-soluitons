@@ -6,8 +6,10 @@ import b from "@/assets/img/product/gpon/olt/olt-v5832xg.png";
 import c from "@/assets/img/product/gpon/ont/ont-h840c.png"; // Import your CSS file
 import d from "@/assets/img/product/gpon/onu/onu-v2724xt.png"; // Import your CSS file
 import e from "@/assets/img/product/gpon/olt/olt-V5816.png"; // Import your CSS file
-import switch_b from "@/assets/img/product/switch/l3-switch-v-5624g.png";
-import switch_c from "@/assets/img/product/switch/switch-d-2224g.png";
+import f from "@/assets/img/product/gpon/ont/ont-h660-gma.png";
+import g from "@/assets/img/product/gpon/onu/onu-v2724gg.png";
+import h from "@/assets/img/product/gpon/onu/onu-d2224gp.png";
+import h from "@/assets/img/product/switch/l3-switch-v5648g.png";
 
 // const activeTab = ref('XGS/G-PON')
 // const currentIndex = ref(0)
@@ -62,18 +64,18 @@ function useTabs() {
                 },
                 {
                     id: 2,
-                    slug: "V.5624.G",
-                    title: "V.5624.G",
-                    body: "24-port, no traffic delay.",
-                    image: switch_b,
+                    slug: "H660GMA",
+                    title: "H660GMA",
+                    body: "H660GM-A optical network terminal (ONT) is targeted for all subscribers requiring high-speed data interfaces in a cost-effective indoor housing. Fully compliant with ITU-T G.984 standards, the H660GM-A supports data rates of 1.25Gbps upstream and 2.5Gbps downstream. The H660GM-A provides 1 GPON uplink port, 4 Gigabit Ethernet (10/100/1000Base-T) ports, Wireless LAN interface, and 1 FXS voice port that enhance the ability to deliver demanding data/Wi-Fi/VoIP services.",
+                    image: f,
                     logo: bg,
                 },
                 {
                     id: 3,
-                    slug: "D.2224.G",
-                    title: "D.2224.G",
-                    body: "Switch for communication.",
-                    image: switch_c,
+                    slug: "V2724GG",
+                    title: "V2724GG",
+                    body: "The V2724GG is a cost effective single-board Gigabit Ethernet switch. It has been designed as ultra-compact customer premise equipment with the reliable Layer 2 functionalities. The V2724GG is comprised of 24-port 1000Base-X(SFP) and 4-port 10GBase-R(SFP/SFP+).",
+                    image: g,
                     logo: bg,
                 },
             ],
@@ -82,18 +84,18 @@ function useTabs() {
             cards: [
                 {
                     id: 1,
-                    slug: "V.5624.G",
-                    title: "V.5624.G",
-                    body: "24-port, no traffic delay.",
-                    image: switch_b,
+                    slug: "D2224GP",
+                    title: "D2224GP",
+                    body: "Dasan Networks' D2224GP is a gigabit Ethernet switch that supports Power over Ethernet (PoE) function for 24 subscriber ports.",
+                    image: h,
                     logo: bg,
                 },
                 {
                     id: 2,
-                    slug: "D.2224.G",
-                    title: "D.2224.G",
-                    body: "Switch for communication.",
-                    image: switch_c,
+                    slug: "V5648G",
+                    title: "V5648G",
+                    body: "The V5648G is a 1U high-performance stand-alone enterprise L3 switch designed for data center, campus, and branch office environments.",
+                    image: i,
                     logo: bg,
                 },
             ],

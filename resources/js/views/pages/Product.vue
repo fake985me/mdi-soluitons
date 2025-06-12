@@ -74,22 +74,26 @@
           <!-- Products -->
           <div class="lg:col-span-3">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div v-for="card in paginatedCards" :key="card.id" class="bg-white rounded-lg shadow hover:shadow-md">
+              <div v-for="card in filteredCards" :key="card.id"
+                class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <RouterLink :to="`/product/${card.id}`">
-                  <img :src="card.image" :alt="card.title" class="w-full h-48 object-cover rounded-t-lg" />
+                  <img :src="card.image" :alt="card.title" class="w-fit h-46 place-items-center rounded-t-lg p-5" />
                 </RouterLink>
-                <div class="p-4">
+                <div class="px-4 py-3 w-72">
                   <h3 class="text-lg font-semibold text-gray-900 truncate">
                     <RouterLink :to="`/product/${card.id}`" class="hover:underline">
                       {{ card.title }}
                     </RouterLink>
                   </h3>
-                  <p class="text-sm text-gray-500">{{ card.date }}</p>
-                  <p class="text-sm mt-1 text-gray-700">{{ card.author }}</p>
+                  <p class="text-sm text-gray-500">{{ card.texta }}</p>
+                  <p class="text-sm text-gray-500">{{ card.textb }}</p>
+                  <p class="text-sm text-gray-500">{{ card.textc }}</p>
                 </div>
               </div>
             </div>
           </div>
+
+
         </div>
       </section>
     </main>
@@ -110,6 +114,33 @@ import {
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { RouterLink } from 'vue-router'
 
+import xgsa from '@/assets/img/product/gpon/olt/olt-v8208.png';
+import xgsb from '@/assets/img/product/gpon/olt/olt-v5832xg.png';
+import xgsc from "@/assets/img/product/gpon/onu/onu-v2724xt.png";
+import xgsd from "@/assets/img/product/gpon/ont/ont-h840c.png";
+
+import ga from "@/assets/img/product/gpon/onu/onu-d2008gpe.png";
+import gb from "@/assets/img/product/gpon/olt/v-8106.png";
+import gc from "@/assets/img/product/gpon/olt/olt-v8102.png";
+import gd from "@/assets/img/product/gpon/olt/olt-V5816.png";
+import ge from "@/assets/img/product/gpon/olt/olt-V5808.png";
+import gf from "@/assets/img/product/gpon/olt/olt-V5804.png";
+import gg from "@/assets/img/product/gpon/ont/ont-h660-gma.png";
+import gh from "@/assets/img/product/gpon/ont/ont-h660nb.png";
+import gi from "@/assets/img/product/gpon/ont/ont-h665.png";
+import gj from "@/assets/img/product/gpon/onu/onu-d2224gp.png";
+import gk from "@/assets/img/product/gpon/onu/D2224g.png";
+import gl from "@/assets/img/product/gpon/onu/onu-v2724gg.png";
+
+import sa from "@/assets/img/product/switch/switch-v-8610.png";
+import sb from "@/assets/img/product/switch/switch-v-8607.png";
+import sc from "@/assets/img/product/switch/switch-v-8605.png";
+import sd from "@/assets/img/product/switch/l2-c2100.png";
+import se from "@/assets/img/product/switch/l2-c2300.png";
+import sf from "@/assets/img/product/switch/l3-m4000.png";
+import sg from "@/assets/img/product/switch/l3-m3500.png";
+
+
 // State
 const mobileFiltersOpen = ref(false)
 const activeTab = ref(0)
@@ -123,9 +154,9 @@ const tabs = [
 
 // Kategori berdasarkan tab
 const categories = {
-  0: ['XGS-PON OLT', 'XGS-PON ONU/PoE', 'XGS-PON ONT'],
-  1: ['G-PON OLT', 'G-PON ONT', 'G-PON ONU'],
-  2: ['L2 Switch', 'L3 Switch', 'PoE Switch']
+  0: ['XGS-PON OLT', 'XGS-PON ONU', 'XGS-PON ONT'],
+  1: ['G-PON OLT', 'G-PON ONT', 'G-PON ONU/PoE'],
+  2: ['Core Switch', 'L2 Switch', 'L3 Switch']
 }
 
 const currentCategories = computed(() => categories[activeTab.value] || [])
@@ -134,27 +165,210 @@ const currentCategories = computed(() => categories[activeTab.value] || [])
 const cards = ref([
   {
     id: 1,
-    title: 'OLT GPON-16X',
-    image: 'https://via.placeholder.com/400x300',
-    date: 'June 2025',
-    author: 'ZTE',
+    title: 'V8208 XGS-PON OLT',
+    image: xgsa,
+    texta: '48 port XGSPON',
+    textb: '96 port GPON',
+    textc: null,
     category: 'XGS-PON OLT'
   },
   {
     id: 2,
-    title: 'L2 Switch 24 Port',
-    image: 'https://via.placeholder.com/400x300',
-    date: 'June 2025',
-    author: 'Cisco',
-    category: 'L2 Switch'
+    title: 'V5832XG XGS-PON OLT',
+    image: xgsb,
+    texta: '16 port XGSPON',
+    textb: '32 port GPON',
+    textc: null,
+    category: 'XGS-PON OLT'
   },
   {
     id: 3,
-    title: 'G-PON ONT Dual Band',
-    image: 'https://via.placeholder.com/400x300',
-    date: 'June 2025',
-    author: 'Huawei',
+    title: 'V2724XT XGS-PON ONU',
+    image: xgsc,
+    texta: '24 port 10G RJ45',
+    textb: '4 port 1/10G SFP28',
+    textc: null,
+    category: 'XGS-PON ONU'
+  },
+  {
+    id: 4,
+    title: 'H840C XGS-PON ONT',
+    image: xgsd,
+    texta: '4xGE RJ45',
+    textb: '1x10GE RJ45',
+    textc: null,
+    category: 'XGS-PON ONT'
+  },
+  {
+    id: 5,
+    title: 'D2008GPE G-PON ONU/PoE',
+    image: ga,
+    texta: '8 port PoE',
+    textb: null,
+    textc: null,
+    category: 'G-PON ONU/PoE'
+  },
+  {
+    id: 6,
+    title: 'V-8106 G-PON OLT',
+    image: gb,
+    texta: '96 port GPON',
+    textb: null,
+    textc: null,
+    category: 'G-PON OLT'
+  },
+  {
+    id: 7,
+    title: 'V-8102 G-PON OLT',
+    image: gc,
+    texta: '32 port GPON',
+    textb: null,
+    textc: null,
+    category: 'G-PON OLT'
+  },
+  {
+    id: 8,
+    title: 'V5816 G-PON OLT',
+    image: gd,
+    texta: '16 port GPON',
+    textb: null,
+    textc: null,
+    category: 'G-PON OLT'
+  },
+  {
+    id: 9,
+    title: 'V5808 G-PON OLT',
+    image: ge,
+    texta: '8 port GPON',
+    textb: null,
+    textc: null,
+    category: 'G-PON OLT'
+  },
+  {
+    id: 10,
+    title: 'V5804 G-PON OLT',
+    image: gf,
+    texta: '4 port GPON',
+    textb: null,
+    textc: null,
+    category: 'G-PON OLT'
+  },
+  {
+    id: 11,
+    title: 'H660-GMA G-PON ONT',
+    image: gg,
+    texta: '4xGE RJ45',
+    textb: '1xPOTS RJ11',
+    textc: null,
     category: 'G-PON ONT'
+  },
+  {
+    id: 12,
+    title: 'H660NB G-PON ONT',
+    image: gh,
+    texta: '4xGE RJ45',
+    textb: null,
+    textc: null,
+    category: 'G-PON ONT'
+  },
+  {
+    id: 13,
+    title: 'H665 G-PON ONT',
+    image: gi,
+    texta: '1xGE RJ45',
+    textb: null,
+    textc: null,
+    category: 'G-PON ONT'
+  },
+  {
+    id: 14,
+    title: 'D2224GP G-PON ONU/PoE',
+    image: gj,
+    texta: '24 port PoE',
+    textb: null,
+    textc: null,
+    category: 'G-PON ONU/PoE'
+  },
+  {
+    id: 15,
+    title: 'D2224G G-PON ONU',
+    image: gk,
+    texta: '24 port RJ45',
+    textb: '4x SFP',
+    textc: null,
+    category: 'G-PON ONU/PoE'
+  },
+  {
+    id: 16,
+    title: 'V2724GG G-PON ONU',
+    image: gl,
+    texta: '24 port 1G SFP',
+    textb: '4 port 10G SFP/SFP+',
+    textc: null,
+    category: 'G-PON ONU/PoE'
+  },
+  {
+    id: 17,
+    title: 'V-8610 Core Switch',
+    image: sa,
+    texta: '96x40G/100G',
+    textb: '384x1G/10G',
+    textc: '18u 19" Rack',
+    category: 'Core Switch'
+  },
+  {
+    id: 18,
+    title: 'V-8607 Core Switch',
+    image: sb,
+    texta: '60x40G/100G',
+    textb: '240x1G/10G',
+    textc: '8u 19" Rack',
+    category: 'Core Switch'
+  },
+  {
+    id: 19,
+    title: 'V-8605 Core Switch',
+    image: sc,
+    texta: '36x40G',
+    textb: '144x1G/10G',
+    textc: '5u 19" Rack',
+    category: 'Core Switch'
+  },
+  {
+    id: 20,
+    title: 'L2-C2100 L2 Switch',
+    image: sd,
+    texta: '2 x 1/10GBase-R (SFP/SFP+) 8 x 10/25GBase-R (SFP+/SFP28) 2 x 100GBase-R (QSFP28) or 1 x 100GBase-R (QSFP-DD)',
+    textb: null,
+    textc: null,
+    category: 'L2 Switch'
+  },
+  {
+    id: 21,
+    title: 'L2-C2300 L2 Switch',
+    image: se,
+    texta: '4 x 1/10GBase-R (SFP/SFP+) 16 x 10/25GBase-R (SFP+/SFP28) 6 x 100GBase-R (QSFP28/QSFP-DD)',
+    textb: null,
+    textc: null,
+    category: 'L2 Switch'
+  },
+  {
+    id: 22,
+    title: 'L3-M4000 L3 Switch',
+    image: sf,
+    texta: '32 port 1/10/25GBase-R (SFP28)',
+    textb: '2 port 100GBase-R (SFP+)',
+    textc: null,
+    category: 'L3 Switch'
+  },
+  {
+    id: 23,
+    title: 'L3-M3500 L3 Switch',
+    image: sg,
+    texta: '48-port - 1GBase-R (SFP) or 10GBase-R (SFP+) or 25GBase-R (SFP28)',
+    textb: '6-port - 40GBase-R (QSFP+) or 100GBase-R (QSFP28)',
+    textc: null,
+    category: 'L3 Switch'
   },
 ])
 
